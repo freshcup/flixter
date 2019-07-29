@@ -1,10 +1,9 @@
 <script>
      $(function() {
       $('.new-lesson-button').click(function( event ) {
-  //var lessonUrl = $( event.target).data('lesson-url');
-  //$('#newLessonForm').attr('action', lessonUrl);
-alert("hello");
-});
+        var lessonUrl = $( event.target).data('lesson-url');
+        $('#newLessonForm').attr('action', lessonUrl);
+      });
   });
   $(function() {
     $('.lessons').sortable({
@@ -49,12 +48,12 @@ alert("hello");
   <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
       <li data-update-url="<%= instructor_section_path(section) %>" class="section-li">
-        <div class="header" float-left">
+        <div class="header" float-left>
           <span class="fa fa-star"></span>
         <%= section.title %>
         </div>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+        <!-- Button trigger lesson modal -->
+        <button type="button" class="btn btn-primary btn-lg new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
           New Lesson
         </button>
         
