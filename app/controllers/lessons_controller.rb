@@ -5,6 +5,9 @@ class LessonsController < ApplicationController
   def show
   end
 
+  def create
+  end
+
   private
 
   def require_authorized_for_current_course
