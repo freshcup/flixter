@@ -1,18 +1,18 @@
 <script>
-    $(function() {
+     $(function() {
     $('.new-lesson-button').click(function( event ) {
       var lessonURL=  $(event.target).data('lesson-url');
       $('#newLessonForm').attr('action', lessonURL);
     });
-
-
+  });
+  $(function() {
     $('.lessons').sortable({
       update: function( event, ui ) {
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
-          dataType: 'json',
-          data: { lesson: { row_order_position: ui.item.index() } }
+          dataType: 'json', 
+          data: { lesson: { row_order_position: ui.item.index() }}
         });
       }
     });
