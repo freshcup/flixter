@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="http://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Staatliches&display=swap" rel="stylesheet">
     </head>
 
   <body>
@@ -58,43 +59,43 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-sm-3">
-        <b>Teachers</b>
+        <span class="footer-titles">Teachers</span>
         <br />
         <%= link_to 'Teach a Course', new_instructor_course_path %>
         <br />
         <%= link_to 'My Dashboard', dashboard_path %>
       </div>
       <div class="col-12 col-sm-3">
-        <b>About</b>
+        <span class="footer-titles">About</span>
         <br />
-        <%= link_to 'Team', '#' %>
+        <%= link_to 'Team', team_path %>
         <br />
-        <%= link_to 'Careers', '#' %>
+        <%= link_to 'Careers', careers_path %>
         <br />
         <%= link_to 'Privacy Policy', privacy_path %>
       </div>
       <div class="col-12 col-sm-3">
-        <b>Contact</b>
+        <span class="footer-titles">Contact</span>
         <br />
-        info@freshcupmedia.com
+        <a href="mailto:info@freshcupmedia.com">info@freshcupmedia.com</a>  
         <br />
         <br />
       </div>
       <div class="col-12 col-sm-3 social">
-        <b>Social</b>
+        <span class="footer-titles">Social</span>
         <br />
-        <br />
-        <%= link_to 'https://github.com/freshcup' do %>
+        <%= link_to 'https://github.com/freshcup', target: :_blank do %>
           <span class="fa fa-github-square fa-2x social-button"></span>
         <% end %>
-        <span class="fa fa-facebook-square fa-2x social-button"></span>
-        <span class="fa fa-twitter-square fa-2x social-button"></span>
+        <%= link_to 'https://www.facebook.com/Fresh-Cup-Media-162977683854456/', target: :_blank do %>
+          <span class="fa fa-facebook-square fa-2x social-button"></span>
+        <% end %>
       </div>
 
     </div>
   </div>
 </div>
-
+https://www.facebook.com/Fresh-Cup-Media-162977683854456/
       <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
       <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   </body>

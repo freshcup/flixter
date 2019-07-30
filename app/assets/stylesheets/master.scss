@@ -18,10 +18,10 @@ body {
   background: image_url('simple_dashed.png');
 }
 
-.navbar-inverse a.navbar-brand {
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
-  color: white;
+.navbar-inverse .navbar-brand {
+  color: #cc0000;
+  font-family: 'Monoton', cursive;
+  font-size: 40px;
 }
 
 .hero {
@@ -30,7 +30,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 600px;
+  height: 500px;
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
@@ -150,4 +150,11 @@ ul .header .fa {
 
 .lessons li p {
   margin: 0;
+}
+
+.footer-titles {
+  font-weight: 100;
+  color: #cc0000;
+  font-family: 'Staatliches', cursive;
+  font-size: 22px;
 }

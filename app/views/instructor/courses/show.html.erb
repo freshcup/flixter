@@ -35,10 +35,11 @@
 
 <br />
 <div class="booyah-box col-10 offset-1">
-  <h1 class="text-center"><%= current_course.title %></h1>
+  <h1 class="text-left"><%= current_course.title %></h1>
   <%= image_tag current_course.file.url, class: 'img-fluid' %>
-
-  <div class="text-center">
+  <br />
+  <br />
+  <div class="text-left">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
       Add a new section
@@ -68,7 +69,7 @@
                   <br />
                   <i class="fa fa-arrow-circle-right fa-3x" style="color:#ffffff;"></i>
                 </div>
-                <div class="col-11 text-center">
+                <div class="col-10 text-center">
                   <p>
                     <b><%= lesson.title %></b>
                   </p>
