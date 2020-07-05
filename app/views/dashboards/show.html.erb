@@ -3,13 +3,15 @@
 <div class="booyah-box col-10 offset-1">
   <h2>What I'm Learning</h2>
   <% current_user.enrolled_courses.each do |course| %>
-    <h3 class="text-left">
-      <%= link_to course.title, course_path(course) %>
-    </h3>
-    <br />
-    <% if image_tag course.file.url %>
+    <% if course.title %>
+      <h3 class="text-left">
+        <%= link_to course.title, course_path(course) %>
+      </h3>
+      <br />
       <%= image_tag course.file.url, class: 'img-fluid' %>
     <% end %>
+  <% end %>
+
     <br />
     <br />
     <div class="row">
