@@ -10,7 +10,9 @@
         <%= link_to course.title, course_path(course) %>
       </h2>
      <br />
-     <%= image_tag course.file.url, class: 'img-fluid' %>
+      <% if course.file.url %>
+        <%= image_tag course.file.url, class: 'img-fluid' %>
+      <% end %>
     <% end %>
        
     
