@@ -34,7 +34,9 @@
       <%= link_to course.title, course_path(course) %>
       </h3>
      <br />
-    <%= image_tag course.file.url, class: 'img-fluid' %>
+     <% if image_tag course.file.url %>
+        <%= image_tag course.file.url, class: 'img-fluid' %>
+     <% end %>
   <% end %>
   
   <br />
