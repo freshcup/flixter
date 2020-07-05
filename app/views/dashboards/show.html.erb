@@ -24,11 +24,13 @@
 
   <h2>What I'm Teaching</h2>
 <% current_user.courses.each do |course| %>
-  <h3 class="text-left">
-    <%= link_to course.title, course_path(course) %>
-   </h3>
-   <br />
-  <%= image_tag course.file.url, class: 'img-fluid' %>
+  <% if course_path(course) %>
+    <h3 class="text-left">
+      <%= link_to course.title, course_path(course) %>
+      </h3>
+     <br />
+    <%= image_tag course.file.url, class: 'img-fluid' %>
+  <% end %>
   
   <br />
   <div class="row">
