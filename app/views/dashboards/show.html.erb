@@ -7,7 +7,7 @@
       <%= link_to course.title, course_path(course) %>
     </h3>
     <br />
-    <% if image_tag %>
+    <% if image_tag course.file.url %>
       <%= image_tag course.file.url, class: 'img-fluid' %>
     <% end %>
     <br />
